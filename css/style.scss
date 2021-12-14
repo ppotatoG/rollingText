@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+#main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(29, 29, 29);
+    h2 {
+        color: #fff;
+        font-size: 4rem;
+        overflow: hidden;
+        display: flex;
+        height: 5rem;
+        line-height: 5rem;
+        ul.mainText {
+            transition: transform .2s;
+            padding: 0 1vw;
+            li {
+                color: #fff;
+                text: {
+                    align: center;
+                    transform: uppercase;
+                }
+            }
+        }
+    }
+}
