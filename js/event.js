@@ -9,13 +9,28 @@
         mainText.appendChild(li);
     });
     
-    let count = 0;
-    let height = mainText.offsetHeight;
-
-    setInterval(() => {
-        count <= 0 ? count++ : count --;    
-        mainText.style.transform = `translateY(-${height * count}px)`;
-    }, 4000);
+    const height = mainText.offsetHeight;
+    let flag = false;
+    let i = 1;
+        
+    setInterval(function() {
+        mainText.style.transform = `translateY(-${height * i}px)`;
+        if ( flag ) {
+            if ( i === 0 ) {
+                flag = false;
+                i++;
+                return;
+            }
+            i--;
+        } else {
+            if ( i === mainTextArr.length - 1 ) {
+                flag = true;
+                i--;
+                return;
+            }
+            i++;
+        }
+    }, 1000);
 
     const boxs = document.querySelectorAll('#form .box');
     
